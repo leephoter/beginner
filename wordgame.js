@@ -6,3 +6,4 @@ for (var answer = prompt(word); word[word.length - 1] === answer[0]; ) {
         var answer = prompt(word)
     }
 } alert('U lost !')
+
