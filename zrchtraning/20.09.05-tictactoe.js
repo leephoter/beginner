@@ -21,3 +21,4 @@ for (var i = 1; i <= 3; i++) {
 }
 바디.appendChild(테이블)
 console.log(줄들, 칸들)
+// 
