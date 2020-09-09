@@ -1,4 +1,4 @@
-var 객체 = {
+var document = {
     이름 : '이한결',
     키 : 170,
     몸무게 : 70,
@@ -6,5 +6,5 @@ var 객체 = {
       console.log('냠냠')
     },
 }
-console.log(객체.이름)
-console.log(객체['키'])
+console.log(document.이름)
+console.log(document['키'])
