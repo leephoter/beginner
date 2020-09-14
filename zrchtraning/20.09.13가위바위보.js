@@ -1,2 +1,8 @@
-document.querySelector('#computer').style.background = 'url(file:///Users/hangyoellee/Desktop/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202020-09-13%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%207.23.29.png)';
-setTimeout()
+var left = 0;
+setInterval(() => {
+    var left = 0;
+    document.querySelector('#computer').style.background = 'url(200915.png)' + left + '0';
+}, 1000);
+setTimeout(
+    
+)
