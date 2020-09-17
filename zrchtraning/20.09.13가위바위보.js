@@ -4,7 +4,7 @@ var rps = { // Key:value 1:1matcing
     scissors: '-290px',
     paper: '-580px',
 }
-console.log(Object.entries(rps));
+//console.log(Object.entries(rps));
 function computerpic(imageaddress) {
     return Object.entries(rps).find(function(v) {
         return v[1] === imageaddress
