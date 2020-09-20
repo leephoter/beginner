@@ -10,7 +10,7 @@ function computerpic(imageaddress) {
         return v[1] === imageaddress
     })[0];
 }
-
+//비동기
 setInterval(function () {
     if (imageaddress === rps.rock) {
         imageaddress = rps.scissors;
@@ -21,8 +21,8 @@ setInterval(function () {
     else {
         imageaddress = rps.rock;
     }
-    document.querySelector('#computer').style.background = 'url(200915.png)' + imageaddress + '0';
-}, 100);
+    document.querySelector('#computer').style.background = ' url(200915.png) ' + imageaddress + ' 0';
+}, 300);
 
 document.querySelectorAll('.btn').forEach(function(btn) {
     btn.addEventListener('click', function () {

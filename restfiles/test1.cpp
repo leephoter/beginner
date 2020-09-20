@@ -5,4 +5,5 @@ int main(void) {
     int gyeolage = thisyear - 1997;
     int jinage = thisyear - 2001;
     printf("%d - %d = %d\n", gyeolage, jinage, gyeolage-jinage);
+    return 0;
 }
