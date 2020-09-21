@@ -6,9 +6,10 @@ var rps = { // Key:value 1:1matcing
 }
 //console.log(Object.entries(rps));
 function computerpic(imageaddress) {
-    return Object.entries(rps).find(function(v) {
-        return v[1] === imageaddress
-    })[0];
+    return Object.entries(rps).find(function(v) { //find는 배열에서만 가능한 함수이기 때문에 Object.entries(객체) -> 객체를 배열의 형태로 만드르어줌
+        console.log(v)
+        return v[1] === imageaddress // 다시
+    })[0]; // 다시 
 }
 //비동기
 setInterval(function () {
@@ -23,9 +24,13 @@ setInterval(function () {
     }
     document.querySelector('#computer').style.background = ' url(200915.png) ' + imageaddress + ' 0';
 }, 300);
+var elements = document.querySelectorAll('.btn');
 
+for (var i = 0, element; (element = elements[i]); i++) {
+    console.log(element);
+}
 document.querySelectorAll('.btn').forEach(function(btn) {
-    btn.addEventListener('click', function () {
+    btn.addEventListener('click', function () { 
         var mypic = this.textContent
         console.log(mypic, computerpic(imageaddress));
         if (mypic === 'scissors') {
