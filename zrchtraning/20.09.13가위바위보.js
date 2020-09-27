@@ -45,7 +45,7 @@ document.querySelectorAll('.btn').forEach(function(btn) {
             intervalmaker()
         }, 2000);
         var mypic = this.textContent
-        if (scoreline[mypic] - scoreline[co mputerpic(imageaddress)] === 0) {
+        if (scoreline[mypic] - scoreline[computerpic(imageaddress)] === 0) {
             console.log("Draw !!")
         }
         else if ([-1, 0].includes(scoreline[mypic] - scoreline[computerpic(imageaddress)])) {
