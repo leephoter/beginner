@@ -1,3 +1,4 @@
+var tbody = document.querySelector('#table tbody');
 document.querySelector('#exec').addEventListener('click', function() {
     var hor = parseInt(document.querySelector('#hor').value)
     var ver = parseInt(document.querySelector('#ver').value)
@@ -15,7 +16,6 @@ document.querySelector('#exec').addEventListener('click', function() {
     console.log(shuffle);
 //지뢰테이블 만들기
     var dataset = [];
-    var tbody = document.querySelector('#table tbody');
     for (var i = 0; i < ver; i += 1) {
         var arr = [];
         var tr = document.createElement('tr');
@@ -30,10 +30,17 @@ document.querySelector('#exec').addEventListener('click', function() {
     //지뢰심기
     for (var k = 0; k < shuffle.length; k++) {
         var height = Math.floor(shuffle[k] / 10);
-        var width = shuffle[k] % 10;
+        var width = shuffle[k] % 10 - 1;
         console.log(height, width);
-        tbody.children[height].children[width].textContent = 'x'
-        dataset[height][width] = 'x'
+        tbody.children[height].children[width].textContent = 'X'
+        dataset[height][width] = 'X'
     }
     console.log(dataset);
 });
+
+tbody.querySelectorAll('td').forEach(function (td) {
+    td.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        console.log('오른쪽 클릭')
+    })
+})
