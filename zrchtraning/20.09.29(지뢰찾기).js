@@ -4,9 +4,10 @@ document.querySelector('#exec').addEventListener('click', function() {
     var ver = parseInt(document.querySelector('#ver').value)
     var mine = parseInt(document.querySelector('#mine').value)
     console.log(hor, ver, mine);
+    // console.log(tbody); //
 //지뢰위치
-    var sub = Array(hor*ver).fill().map(function (emnt, index) {
-        return index;
+    var sub = Array(hor*ver).fill().map(function (emnt, indexx) {
+        return indexx;
     });
     var shuffle = [];
     while (sub.length > 80) {
@@ -30,11 +31,18 @@ document.querySelector('#exec').addEventListener('click', function() {
     //지뢰심기
     for (var k = 0; k < shuffle.length; k++) {
         var height = Math.floor(shuffle[k] / 10);
-        var width = shuffle[k] % 10 - 1;
+        var width = shuffle[k] % 10;
         console.log(height, width);
-        tbody.children[height].children[width].textContent = 'X'
-        dataset[height][width] = 'X'
+        tbody.children[height].children[width].textContent = 'X';
+        dataset[height][width] = 'X';
     }
+    //     if (height >= 0 && width >= 0) {
+    //         tbody.children[height].children[width].textContent = "X";
+    //         dataset[height][width] = "X";
+    //       }
+    //     //tbody.children[height].children[width].textContent = 'X'
+    //     //dataset[height][width] = 'X'
+    // }
     console.log(dataset);
 });
 
