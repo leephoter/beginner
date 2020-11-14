@@ -33,9 +33,20 @@ document.querySelector('#exec').addEventListener('click', function() {
                 var prtbody = e.currentTarget.parentNode.parentNode;
                 var space = Array.prototype.indexOf.call(prtr.children, e.currentTarget);
                 var lines = Array.prototype.indexOf.call(prtbody.children, prtr);
-                console.log(e.currentTarget, space, lines);
-                e.currentTarget.textContent = '!'; //지뢰인것같은 곳을 우클릭으로 "!"표시
-                dataset[lines][space] = '!'; //화면과 데이터를 일치시킴
+                // console.log(e.currentTarget, space, lines);
+                if (e.currentTarget.textContent === 'X' || e.currentTarget.textcontent === '') {
+                    e.currentTarget.textContent = '!';
+                } else if (e.currentTarget.textContent === '!') {
+                    e.currentTarget.textContent = '?';
+                } else if (e.currentTarget.textContent === '?') {
+                    if (dataset[lines][space] === 1) {
+                        e.currentTarget.textContent = '';
+                    } else if (dataset[lines][space] === 'X') {
+                        e.currentTarget.textContent = 'X';
+                    }
+                }
+                // e.currentTarget.textContent = '!'; //지뢰인것같은 곳을 우클릭으로 "!"표시
+                // dataset[lines][space] = '!'; //화면과 데이터를 일치시킴
             });
             tr.appendChild(td);
         }
@@ -50,4 +61,8 @@ document.querySelector('#exec').addEventListener('click', function() {
         dataset[height][width] = 'X';
     }
     console.log(dataset);
+});
+tbody.addEventListener('contextmenu', function(e) {
+    console.log('커런트타겟', e.currentTarget);
+    console.log('타겟', e.target);
 });
