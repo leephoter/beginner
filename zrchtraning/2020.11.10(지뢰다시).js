@@ -34,7 +34,7 @@ document.querySelector('#exec').addEventListener('click', function() {
                 var space = Array.prototype.indexOf.call(prtr.children, e.currentTarget);
                 var lines = Array.prototype.indexOf.call(prtbody.children, prtr);
                 // console.log(e.currentTarget, space, lines);
-                if (e.currentTarget.textContent === 'X' || e.currentTarget.textcontent === '') {
+                if (e.currentTarget.textContent === 'X' || e.currentTarget.textContent === '') {
                     e.currentTarget.textContent = '!';
                 } else if (e.currentTarget.textContent === '!') {
                     e.currentTarget.textContent = '?';
