@@ -48,6 +48,28 @@ document.querySelector('#exec').addEventListener('click', function() {
                 // e.currentTarget.textContent = '!'; //지뢰인것같은 곳을 우클릭으로 "!"표시
                 // dataset[lines][space] = '!'; //화면과 데이터를 일치시킴
             });
+            td.addEventListener('click', function (e) {
+                //클릭했을 때 주변 지뢰 갯수
+                var prtr = e.currentTarget.parentNode;
+                var prtbody = e.currentTarget.parentNode.parentNode;
+                var space = Array.prototype.indexOf.call(prtr.children, e.currentTarget);
+                var lines = Array.prototype.indexOf.call(prtbody.children, prtr);
+                if (dataset[lines][space] === 'X') {
+                    e.currentTarget.textContent = '펑';
+                }  else {
+                    var purlieus = [dataset[lines][space-1], dataset[lines][space+1]];
+                    if (dataset[lines-1]) {
+                        purlieus = purlieus.concat(dataset[lines-1][space-1], dataset[lines-1][space], dataset[lines-1][space+1])
+                    } 
+                    if (dataset[lines+1]) {
+                        purlieus = purlieus.concat(dataset[lines+1][space-1], dataset[lines+1][space], dataset[lines+1][space+1])
+                    }
+                    e.currentTarget.textContent = purlieus.filter(function(v) {
+                        return v === 'X';
+                    }).length;
+                    console.log(purlieus); //주변 줄,칸에 X인 배열들을 하나로 묶어서 길이를 잰다 = 지뢰의 갯수
+                }
+            });
             tr.appendChild(td);
         }
         tbody.appendChild(tr);
@@ -56,13 +78,8 @@ document.querySelector('#exec').addEventListener('click', function() {
     for (var k = 0; k < shuffle.length; k++) {
         var height = Math.floor(shuffle[k] / 10);
         var width = shuffle[k] % 10;
-        console.log(height, width);
+
         tbody.children[height].children[width].textContent = 'X';
         dataset[height][width] = 'X';
     }
-    console.log(dataset);
-});
-tbody.addEventListener('contextmenu', function(e) {
-    console.log('커런트타겟', e.currentTarget);
-    console.log('타겟', e.target);
 });

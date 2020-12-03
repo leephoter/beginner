@@ -26,7 +26,11 @@ var passivecallback = function(ebent) { //passivecallback = 비동기콜백
         }
     }
 }
-
+// 1 2 3 
+// 4 5 6
+// 7 8 9
+// if(a >= 1 && a <= 9) { a
+//}
 
 for (var i = 1; i <= 3; i++) {
     var line = document.createElement('tr') //line = 줄
