@@ -45,25 +45,33 @@ function gongcolor(number) {
     gong.style.background = backcolor
     resultwindow.appendChild(gong)
 }
-setTimeout(function callbackf() {
-    gongcolor(0)
-}, 500)    
-setTimeout(function callbackf() {
-    gongcolor(1)
-}, 1000)
-setTimeout(function callbackf() {
-    gongcolor(2)
-}, 1500)
-setTimeout(function callbackf() {
-    gongcolor(3)
-}, 2000)
-setTimeout(function callbackf() {
-    gongcolor(4)
-}, 2500)
-setTimeout(function callbackf() {
-    gongcolor(5)
-}, 3000)
-
+// setTimeout(function callbackf() {
+//     gongcolor(0)
+// }, 500)    
+// setTimeout(function callbackf() {
+//     gongcolor(1)
+// }, 1000)
+// setTimeout(function callbackf() {
+//     gongcolor(2)
+// }, 1500)
+// setTimeout(function callbackf() {
+//     gongcolor(3)
+// }, 2000)
+// setTimeout(function callbackf() {
+//     gongcolor(4)
+// }, 2500)
+// setTimeout(function callbackf() {
+//     gongcolor(5)
+// }, 3000)
+//같은 내용 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+for(var i = 0; i < numlots.length; i++) {
+    (function closer(j) {
+        setTimeout(function () {
+            gongcolor(j)
+        }, (j + 1) * 500)
+    })(i)
+}
+//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 setTimeout(function callbackf() {
     var bonuspace = document.getElementsByClassName('bonus')[0]
     var bonusgong = document.createElement('div')
@@ -75,4 +83,4 @@ setTimeout(function callbackf() {
     bonusgong.style.textAlign = 'center'
     bonusgong.textContent = bonus
     bonuspace.appendChild(bonusgong)
-}, 4000)
+}, 3500)

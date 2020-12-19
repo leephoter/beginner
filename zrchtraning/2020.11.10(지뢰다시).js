@@ -1,10 +1,14 @@
 var tbody = document.querySelector('#table tbody');
 var dataset = [];
+var stopflag = false;
 document.querySelector('#exec').addEventListener('click', function() {
+    tbody.innerHTML = ''; //action 클릭시 새로운 배열 생성
+    dataset = [];
+    stopflag = false;
     var hor = parseInt(document.querySelector('#hor').value);
     var ver = parseInt(document.querySelector('#ver').value);
     var mine = parseInt(document.querySelector('#mine').value);
-    // console.log(hor, ver, mine);
+    console.log(hor, ver, mine);
 
     //지뢰 위치 뽑기
     var subs = Array(hor * ver).fill().map(function (urea, index) {
@@ -25,10 +29,13 @@ document.querySelector('#exec').addEventListener('click', function() {
         var tr = document.createElement('tr');
         dataset.push(arr);
         for (var j = 0; j < hor; j+=1) {
-            arr.push(1);
+            arr.push(0);
             var td = document.createElement('td');
             td.addEventListener('contextmenu', function (e) {
                 e.preventDefault();
+                if (stopflag) {
+                    return;
+                }
                 var prtr = e.currentTarget.parentNode;
                 var prtbody = e.currentTarget.parentNode.parentNode;
                 var space = Array.prototype.indexOf.call(prtr.children, e.currentTarget);
@@ -49,25 +56,63 @@ document.querySelector('#exec').addEventListener('click', function() {
                 // dataset[lines][space] = '!'; //화면과 데이터를 일치시킴
             });
             td.addEventListener('click', function (e) {
+                if (stopflag) {
+                    return;
+                }
                 //클릭했을 때 주변 지뢰 갯수
                 var prtr = e.currentTarget.parentNode;
                 var prtbody = e.currentTarget.parentNode.parentNode;
                 var space = Array.prototype.indexOf.call(prtr.children, e.currentTarget);
                 var lines = Array.prototype.indexOf.call(prtbody.children, prtr);
+                e.currentTarget.classList.add('opened');
                 if (dataset[lines][space] === 'X') {
                     e.currentTarget.textContent = '펑';
-                }  else {
-                    var purlieus = [dataset[lines][space-1], dataset[lines][space+1]];
+                    document.querySelector('#result').textContent = '    looooose';
+                    stopflag = true;
+                }  else { //지뢰가 아닌경우 주변 지뢰 갯수 세기
+                    dataset[lines][space] = 1;
+                    var periph = [dataset[lines][space-1], dataset[lines][space+1]];
                     if (dataset[lines-1]) {
-                        purlieus = purlieus.concat(dataset[lines-1][space-1], dataset[lines-1][space], dataset[lines-1][space+1])
+                        periph = periph.concat(dataset[lines-1][space-1], dataset[lines-1][space], dataset[lines-1][space+1])
                     } 
                     if (dataset[lines+1]) {
-                        purlieus = purlieus.concat(dataset[lines+1][space-1], dataset[lines+1][space], dataset[lines+1][space+1])
+                        periph = periph.concat(dataset[lines+1][space-1], dataset[lines+1][space], dataset[lines+1][space+1])
                     }
-                    e.currentTarget.textContent = purlieus.filter(function(v) {
+                    var purminenum = periph.filter(function(v) {
                         return v === 'X';
                     }).length;
-                    console.log(purlieus); //주변 줄,칸에 X인 배열들을 하나로 묶어서 길이를 잰다 = 지뢰의 갯수
+                    //거짓인 값 : false, '', 0, null, undefined, NaN
+                    e.currentTarget.textContent = purminenum || '';
+                    if (purminenum === 0) { //주변 지뢰갯수가 0이면 또 클릭
+                        var perspace = [];
+                        if (tbody.children[lines-1]) {
+                            perspace = perspace.concat([
+                                tbody.children[lines - 1].children[space - 1],
+                                tbody.children[lines - 1].children[space],
+                                tbody.children[lines - 1].children[space + 1],
+                            ]);
+                        }
+                        perspace = perspace.concat([
+                            tbody.children[lines].children[space - 1],
+                            tbody.children[lines].children[space + 1],
+                        ]);
+                        if (tbody.children[lines + 1]) {
+                            perspace = perspace.concat([
+                                tbody.children[lines + 1].children[space - 1],
+                                tbody.children[lines + 1].children[space],
+                                tbody.children[lines + 1].children[space + 1],
+                            ]);
+                        }
+                        perspace.filter((v) => !!v).forEach(function(sidespace) {
+                            var prtr = sidespace.parentNode;
+                            var prtbody = sidespace.parentNode.parentNode;
+                            var perspace2 = Array.prototype.indexOf.call(prtr.children, sidespace);
+                            var perlines2 = Array.prototype.indexOf.call(prtbody.children, prtr);
+                            if (dataset[perlines2][perspace2] !== 1) {
+                                sidespace.click();
+                            }
+                        })
+                    }
                 }
             });
             tr.appendChild(td);

@@ -1,5 +1,5 @@
-for(var i = 0; i <= 10; i++){
-    if (i % 2 === 0 || i % 3 === 0) {
-        console.log(i);
-    }
+function jgfunc(num) {
+    console.log(num);
+    jgfunc(num + 1);
 }
+jgfunc(1);
