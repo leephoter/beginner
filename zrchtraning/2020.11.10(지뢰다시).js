@@ -13,7 +13,7 @@ var codetable = { // dictionary를 만들어서 각 칸의 값을 사용
 };
 document.querySelector('#exec').addEventListener('click', function() { 
     tbody.innerHTML = ''; //action 클릭시 새로운 배열 생성
-    document.querySelector('#result').textContent = '';
+    document.querySelector('#result').textContent = ''; 
     dataset = [];
     opennum = 0;
     stopflag = false;
@@ -21,21 +21,18 @@ document.querySelector('#exec').addEventListener('click', function() {
     var ver = parseInt(document.querySelector('#ver').value);
     var mine = parseInt(document.querySelector('#mine').value);
     // console.log(hor, ver, mine);
-
     //지뢰 위치 뽑기
     var subs = Array(hor * ver).fill().map(function (urea, index) {
         return index;
     });
     var shuffle = []; // 빈 배열
 
-    while (subs.length > 80) {
+    while (subs.length > hor * ver - mine) {
         var movalue = subs.splice(Math.floor(Math.random() * subs.length), 1)[0];
         shuffle.push(movalue);
     }
-
     //console.log(shuffle);
     //지뢰 테이블 만들기
-    
     for (var i = 0; i < ver; i+=1){
         var arr = [];
         var tr = document.createElement('tr');
@@ -55,6 +52,8 @@ document.querySelector('#exec').addEventListener('click', function() {
                 // console.log(e.currentTarget, space, lines);
                 if (e.currentTarget.textContent === 'X' || e.currentTarget.textContent === '') {
                     e.currentTarget.textContent = '!';
+                    e.currentTarget.classList.remove('askt');
+                    e.currentTarget.classList.add('flag'); 
                     if (dataset[lines][space] === codetable.minee) {
                         dataset[lines][space] = codetable.flagminee;
                     } else {
@@ -62,12 +61,15 @@ document.querySelector('#exec').addEventListener('click', function() {
                     }
                 } else if (e.currentTarget.textContent === '!') {
                     e.currentTarget.textContent = '?';
+                    e.currentTarget.classList.remove('flag');
+                    e.currentTarget.classList.add('askt');
                     if (dataset[lines][space] === codetable.flagminee) {
                         dataset[lines][space] = codetable.aksemominee;
                     } else {
                         dataset[lines][space] = codetable.askemo;
                     }
                 } else if (e.currentTarget.textContent === '?') {
+                    e.currentTarget.classList.remove('askt');
                     if  (dataset[lines][space] === codetable.aksemominee) {
                         e.currentTarget.textContent = 'X';
                         dataset[lines][space] = codetable.minee;
@@ -154,9 +156,8 @@ document.querySelector('#exec').addEventListener('click', function() {
     }
     //지뢰 심기 
     for (var k = 0; k < shuffle.length; k++) {
-        var height = Math.floor(shuffle[k] / 10);
-        var width = shuffle[k] % 10;
-
+        var height = Math.floor(shuffle[k] / ver);
+        var width = shuffle[k] % ver;
         tbody.children[height].children[width].textContent = 'X';
         dataset[height][width] = codetable.minee;
     }

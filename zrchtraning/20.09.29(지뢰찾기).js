@@ -6,11 +6,11 @@ document.querySelector('#exec').addEventListener('click', function() {
     console.log(hor, ver, mine);
     // console.log(tbody); //
 //지뢰위치
-    var sub = Array(hor*ver).fill().map(function (emnt, indexx) {
+    var sub = Array(hor*ver).fill().map(function (emnt, indexx) { //지뢰 선택 배열
         return indexx;
     });
-    var shuffle = [];
-    while (sub.length > 80) {
+    var shuffle = []; //
+    while (sub.length > hor * ver - mine) {
         var movvalue = sub.splice(Math.floor(Math.random() * sub.length), 1)[0];
         shuffle.push(movvalue);
     }
