@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8  /">
+        <title>settinginging</title>
+        <style>
+            .card{
+                /* border: 1px solid black; */
+                width : 60px;
+                height : 100px;
+                display: inline-block; /*세로 일렬로 나오지 않게 함 */
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
+            .card-inner {
+                position: relative;
+                width : 60px;
+                height : 99px;
+                text-align: center;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+                background: rgb(233, 228, 166);
+            }
+            .card.flipped .card-inner{
+                transform: rotateY(180deg);
+            }
+            .card-front {
+                background: rgb(84, 106, 226);
+            }
+            .card-inner-temp {
+                position: relative;
+                width : 60px;
+                height : 99px;
+                text-align: center;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+                background: rgb(72, 161, 64);
+            }
+            .card-front, .card-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+            }
+            card-back {
+                transform: rotateY(180deg);
+            }
+        </style>
+    </head>
+    <body>
+        <script src="./20.12.23(짝맞추기).js"></script>
+    </body>
+</html>
