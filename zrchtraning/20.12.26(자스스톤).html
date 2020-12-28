@@ -9,10 +9,14 @@
             vertical-align: top;
             margin-right: 70px;
         }
+        .turn {
+            border: 1px solid black;
+        }
         #my-deck, #rival-deck {
             display: inline-block;
             /* vertical-align: top;  */
             width: 280px;
+            background: rgb(230, 228, 228);
         }
         #rival {
             vertical-align: bottom;
@@ -26,6 +30,8 @@
             display: inline-block;
             position: relative;
             border: 1px solid black;
+            background: white;
+            margin-right: 4px;
         }
         .card-name {
             text-align: center;
@@ -62,43 +68,55 @@
         .card-hidden {
             display: none; /* 안보이게 */
         }
+        .card-selected {
+            border: 2px solid rgb(233, 139, 139);
+        }
+        .card-turnover {
+            background: rgb(189, 187, 187);
+        }
+        #turn-btn {
+            float: right;
+            position: relative;
+            top: -20px;
+        }
     </style>
 </head>
 <body>
 <div id="rival">
-    <div id="rival-cost">Cost :<span>10</span></div>
+    <div>Cost :<span id="rival-cost">10</span>/<span>10</span></div>
     <div id="rival-hero"></div>
     <div id="rival-cards" style="height: 150px">
     </div>
 </div>
 <div id="rival-deck">
     <div>Deck</div>
-    <div class="card-hidden">
+    <!-- <div class="card-hidden">
         <div class="card">
             <div class="card-cost"></div>
             <div class="card-att"></div>
             <div class="card-hp"></div>
         </div>
-    </div>
+    </div>  -->
 </div>
 <hr />        <!--가로줄-->
-<div id="my">
+<button id="turn-btn">Finish my turn</button>
+<div id="my" class="turn">
     <div id="my-cards" style="height: 150px"></div>
-    <!-- </div> -->
     <div id="my-hero">
     </div>
-    <div id="my-cost">Cost :<span>10</span></div>
+    <div>Cost :<span id="my-cost">10</span>/<sapn>10</sapn></div>
 </div>
 <div id="my-deck">
     <div>Deck</div>
 </div>
 <div class="card-hidden">
     <div class="card">
-        <div class="card-name"></div>
+        <div class="card-cost"></div>
         <div class="card-att"></div>
         <div class="card-hp"></div>
     </div>
 </div>
     <script src="./20.12.26(자스스통).js"></script>
+    <div>빨간색 - 체력, 노란색 - 공격력, 적 영웅의 체력이 0이 되면 영웅을 보호하기 위해 쫄병들을 코스트(파란색) 내에서 뽑을 수 있다.</div>
 </body>
 </html>
