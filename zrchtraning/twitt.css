@@ -1,0 +1,34 @@
+#title {
+  width: 1000px;
+  height: 100px;
+  /* position: absolute;  이새ㅣㄲ가 자꾸 겹치게해서 시간 다 잡아먹음 */
+  background: rgb(173, 221, 221);
+  text-align: center;
+  font-size: 80px;
+  user-select: none;
+}
+#box {
+  width: 1000px;
+  height: 900px;
+  background: rgb(189, 204, 238);
+  margin-top: 10px;
+}
+#oneLine {
+  width: 100%;
+  height: 100px;
+  background: yellow;
+}
+.image {
+  width: 40px;
+  height: 40px;
+  background: rgb(85, 170, 170);
+  margin: 20px;
+  display: inline-block;
+}
+.textCoronaBox {
+  width: 800px;
+  height: 60px;
+  align-self: center;
+  text-align: center;
+  font-size: 50px;
+}

@@ -127,20 +127,37 @@ window.addEventListener('mouseup', function(event) {
             data.forEach(function(heightdata, i) {
                 heightdata.forEach(function(widthdata, j) {
                     if (widthdata) {
-                        if (newdata[i][0] && newdata[i][0] === widthdata){
-                            newdata[i][0] *= 2;
+                        if (newdata[i][newdata[i].length - 1] && newdata[i][newdata[i].length - 1] === widthdata) {
+                            newdata[i][newdata[i].length - 1] *= 2;
                             var nowscore = parseInt(scoretable.textContent, 10);
-                            scoretable.textContent = nowscore + newdata[i][0];
+                            scoretable.textContent = nowscore + newdata[i][newdata[i].length - 1];
                         } else {
-                            newdata[i].unshift(widthdata);
+                            newdata[i].push(widthdata);
                         }
                     }
                 });
             });
             console.log(newdata);
-            [1, 2, 3, 4].forEach(function(widthdata, i) {
-                [1, 2, 3, 4].forEach(function(heightdata, j) {
-                    data[i][3 - j] = newdata[i][j] || 0;
+            [1, 2, 3, 4].forEach(function(heightdata, i) {
+                [1, 2, 3, 4].forEach(function(widthdata, j) {
+                    data[i][j] = newdata[i][j] || 0;
+            // data.forEach(function(heightdata, i) {
+            //     heightdata.forEach(function(widthdata, j) {
+            //         if (widthdata) {
+            //             if (newdata[i][0] && newdata[i][0] === widthdata){
+            //                 newdata[i][0] *= 2;
+            //                 var nowscore = parseInt(scoretable.textContent, 10);
+            //                 scoretable.textContent = nowscore + newdata[i][0];
+            //             } else {
+            //                 newdata[i].unshift(widthdata);
+            //             }
+            //         }
+            //     });
+            // });
+            // console.log(newdata);
+            // [1, 2, 3, 4].forEach(function(widthdata, i) {
+            //     [1, 2, 3, 4].forEach(function(heightdata, j) {
+            //         data[i][3 - j] = newdata[i][j] || 0;
                 });
             });
             break;

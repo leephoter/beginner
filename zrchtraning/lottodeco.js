@@ -2,6 +2,7 @@
 var subes = Array(45).fill().map(function(each, index) {
     return index + 1
 })
+//index=44의 빈 배열을 만들고 undefined로 다 채우고 map으로 1부터 45로 채운다
 console.log(subes)
 
 var shuffle = []
