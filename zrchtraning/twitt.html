@@ -6,14 +6,21 @@
     <link rel="stylesheet" href="./twitt.css" />
   </head>
   <body>
-    <div id="title">twitt</div>
+    <div id="title">
+      <div class="textTitle">twitt</div>
+    </div>
     <div id="box">
-      <div id="oneLine">
-        <span class="image"></span>
-        <div class="textCoronaBox">
-          <span>How think about the virus</span>
-        </div>
+      <div id="corona">
+        <div class="coronaImage"></div>
+        <span class="coronaText">사회적 거리두기 3단계 격상에 대한 견해</span>
       </div>
+        ID :<br>
+      <input id="inputID" value='이한결'><br>
+      <div class="comment">comment (한줄평)</div>
+      <input type="text" id="inputComment" value='입니다'></input>
+      <button class="commentButton">twitt</button>
+    </div>
+    <div id="newBox">
     </div>
     <script src="./twitt.js"></script>
   </body>

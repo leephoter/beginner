@@ -1,10 +1,28 @@
 * {
     box-sizing: border-box;
 }
-.box {
-    width: 120px;
-    height: 120px;
-    background: aqua;
-    color: hotpink;
-    padding: 10px 10px 10px 10px;
+.pa {
+    width: 200px;
+    margin: 0 auto;
+    background-color: skyblue;
+}
+.child {
+    /* width: 200px;
+    height: 200px;
+    line-height: 200px; */
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+}
+.one {
+    width: 100%;
+    height: 40px;
+    float: left;
+    background-color: hotpink;
+}
+.two {
+    background-color: rgb(216, 202, 202);
+}
+.three {
+    background-color: green;
 }
