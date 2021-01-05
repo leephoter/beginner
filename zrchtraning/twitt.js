@@ -2,6 +2,27 @@ var inputID = document.getElementById('inputID');
 var inputComment = document.getElementById('inputComment');
 var newspace;
 var newspaces = [];
+var randomID = {
+  1: 'Lee',
+  2: 'Min',
+  3: 'Ik',
+  4: 'Gyeol',
+  5: 'jjjoker',
+};
+var randomComment = {
+  1: '집밖에 나가지마',
+  2: '만나지마 마',
+  3: '모이지 마',
+  4: '놀지도 마',
+  5: '집밥만 먹어',
+};
+
+console.log(
+  // [1, 2, 3, 4, 5].sort(() => 0.5 - Math.random())[0],
+  randomID[[1, 2, 3, 4, 5].sort(() => 0.5 - Math.random())[0]],
+  randomComment[[1, 2, 3, 4, 5].sort(() => 0.5 - Math.random())[0]],
+);
+
 function addspace() {
   newspace = document.createElement('span');
   newspace.style.display = 'inline-block';
