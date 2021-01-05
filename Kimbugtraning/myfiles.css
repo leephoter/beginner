@@ -2,27 +2,44 @@
     box-sizing: border-box;
 }
 .pa {
-    width: 200px;
+    width: 400px;
     margin: 0 auto;
-    background-color: skyblue;
+    background-color: rgb(178, 181, 182);
+    /* overflow: hidden; */
 }
+/* .pa::after {
+    content: "";
+    display: block;
+    clear: left;
+} */
 .child {
-    /* width: 200px;
+    width: 200px;
     height: 200px;
-    line-height: 200px; */
+    line-height: 200px;
     text-align: center;
     color: #fff;
     font-weight: 600;
+    float: left;
 }
 .one {
-    width: 100%;
-    height: 40px;
-    float: left;
+    /* width: 100px; */
+    /* height: 40px; */
+    /* float: left; */
     background-color: hotpink;
 }
 .two {
-    background-color: rgb(216, 202, 202);
+    background-color: rgb(250, 247, 150);
+    color: black;
 }
 .three {
     background-color: green;
 }
+/* .other {
+    background-color: rgb(217, 245, 228);
+} */
+/* .pseudo::after {
+    content: "";
+    font-size: 3px;
+    background-color: rgb(209, 245, 245);
+    clear: left;
+} */
