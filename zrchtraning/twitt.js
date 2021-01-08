@@ -2,7 +2,6 @@ var inputID = document.getElementById('inputID'); //html의 ID입력창 요소
 var inputComment = document.getElementById('inputComment'); //html의 comment입력창 요소
 var newspace; //twitt이 생성될 공간
 var newTwitt = []; //생성된 twitt 배열 (모임)
-
 var time;
 var randomID = {
   //랜덤 댓글 ID
@@ -26,47 +25,27 @@ var newComment = []; // 입력된 comment 배열
 var twitt = document.querySelector('.commentButton'); //twitt 버튼 요소
 var retouchDiv = document.createElement('div'); //수정 버튼 생성
 var retouchButton;
-////// var retouch;
 var removeDiv = document.createElement('div'); //삭제 버튼 생성
 var removeButton;
-/////// var remove;
 
 function addspaceRe() {
-  //div 생성
-  newspace = document.createElement('div');
-  newspace.style.display = 'inline-block';
-  newspace.style.margin = '3px 3px';
-  newspace.style.backgroundColor = 'yellow';
-  newspace.style.textAlign = 'right';
-  newspace.style.padding = '10px 10px';
-  newspace.style.fontSize = '14px';
-  newspace.style.width = '115px';
-  newspace.style.height = '60px';
+  newspace = document.createElement('div'); //(id, comment)div 와 다른 div 생성
+  newspace.classList.add('newspace');
 
   removeButton = document.createElement('button'); //삭제버튼
-  removeButton.style.width = '40px';
-  removeButton.style.height = '20px';
-  removeButton.style.borderRadius = '20%';
-  removeButton.style.borderStyle = 'outset';
-  removeButton.style.float = 'left';
+  removeButton.classList.add('.removeButton');
   removeButton.innerHTML = '삭제';
   newspace.appendChild(removeButton);
-  //////////// remove = document.querySelector('')
 
   retouchButton = document.createElement('button'); //수정버튼
-  retouchButton.style.width = '40px';
-  retouchButton.style.height = '20px';
-  retouchButton.style.borderRadius = '20%';
-  retouchButton.style.borderStyle = 'outset';
-  retouchButton.style.float = 'left';
-  retouchButton.style.marginRight = '5px';
+  retouchButton.classList.add('retouchButton');
   retouchButton.innerHTML = '수정';
   retouchDiv.appendChild(retouchButton);
-  return newTwitt.unshift(newspace), removeButton, retouchButton; //twitt(ID, comment)들의 배열
+
+  return newTwitt.unshift(newspace), removeButton, retouchButton; //생성된 twitt(ID, comment)들의 배열
 }
 function addspaceTwitt() {
-  //div 생성
-  newspace = document.createElement('div');
+  newspace = document.createElement('div'); //(ID,comment)div 생성
   newspace.style.display = 'inline-block';
   newspace.style.margin = '3px 3px';
   newspace.style.backgroundColor = 'yellow';
@@ -94,16 +73,14 @@ function timetable() {
 
 twitt.addEventListener('click', function () {
   //twitt을 누르면
-
   newID.unshift(inputID.value); //ID 값을 배열앞에 저장
   newComment.unshift(inputComment.value); //comment 값을 배열앞에 저장
   inputID.value = ''; //칸 비우기
   inputComment.value = ''; //칸 비우기
 
   //ID, comment --> newTwitt[1], news1
-  addspaceRe();
-  var news1;
-  news1 = newTwitt[0];
+  addspaceRe(); // 수정 삭제   div, button 생성
+  var news1 = newTwitt[0];
   news1.appendChild(retouchDiv);
   newBox.prepend(news1);
 
@@ -113,29 +90,23 @@ twitt.addEventListener('click', function () {
     news1.appendChild(removeButton);
   } else {
     news1.innerHTML = timetable();
+    news1.appendChild(retouchButton);
+    news1.appendChild(removeButton);
   }
 
   //date, rebutton
   addspaceTwitt();
-  var news0;
-  news0 = newTwitt[0];
+  var news0 = newTwitt[0];
   newBox.prepend(news0);
 
   if (newID[0] === '' && newComment[0] === '') {
+    //ID, comment가 빈칸일 경우 랜덤댓글
     news0.innerHTML =
       randomID[[1, 2, 3, 4, 5].sort(() => 0.5 - Math.random())[0]] +
       '<br/><br/>' +
       randomComment[[1, 2, 3, 4, 5].sort(() => 0.5 - Math.random())[0]];
   } else {
+    //아닌경우는 ID, comment 값(text)를 출력
     news0.innerHTML = newID[0] + '<br/><br/>' + newComment[0];
   }
-  console.log(newTwitt);
 });
-
-// .addEventListener('click', function () {
-//   console.log(20);
-// });
-
-// removeButton.addEventListener('click', function () {
-//   console.log(newTwitt);
-// });

@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>hurtmine</title>
-        <style>
-            table {
-                border-collapse: collapse;
-            }
-            td {
-                border: 1px solid rgb(44, 44, 44);
-                text-align: center;
-                line-height: 20px;
-                width: 20px;
-                height: 20px;
-                background: gray;
-            }
-            td.opened {
-                background: white;
-            }
-            td.flag {
-                background: rgb(219, 148, 148);
-            }
-            td.askt {
-                background: rgb(177, 240, 31);
-            }
-        </style>
-    </head>
-    <body>
-        <input id="hor" type="number" placeholder="width" value = '10'>
-        <input id="ver" type="number" placeholder="height" value ='10'>
-        <input id="mine" type="number" placeholder="mine" value = '20'>
-        <button id="exec">action</button>
-        <table id="table">
-            <thead>
-                <tr>
-                    <td><span id="timer">0</span>sec</td>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-        <span id="result"></span>
-        <script src="./2020.11.10(지뢰다시).js"></script>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <title>hurtmine</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        border: 1px solid rgb(44, 44, 44);
+        text-align: center;
+        line-height: 20px;
+        width: 20px;
+        height: 20px;
+        background: gray;
+      }
+      td.opened {
+        background: white;
+      }
+      td.flag {
+        background: rgb(219, 148, 148);
+      }
+      td.askt {
+        background: rgb(177, 240, 31);
+      }
+    </style>
+  </head>
+  <body>
+    <input id="hor" type="number" placeholder="width" value="10" />
+    <input id="ver" type="number" placeholder="height" value="10" />
+    <input id="mine" type="number" placeholder="mine" value="20" />
+    <button id="exec">action</button>
+    <table id="table">
+      <thead>
+        <tr>
+          <td><span id="timer">0</span>sec</td>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <span id="result"></span>
+    <script src="./2020.11.10(지뢰다시).js"></script>
+  </body>
 </html>
