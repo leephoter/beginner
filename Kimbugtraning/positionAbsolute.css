@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+.grandpa {
+    width: 800px;
+    height: 600px;
+    background-color: rgb(73, 73, 73);
+    /* position: relative; */
+}
+.pa {
+    width: 400px;
+    margin: 0 auto;
+    /* position: relative; */
+    background-color: rgb(182, 182, 182);
+}
+.child {
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    /* position: relative; */
+    /* position: absolute; */
+    /* left: 0px; */
+}
+
+.one {
+    background-color: rgb(255, 198, 227);
+    color: black;
+    position: fixed;
+    /* bottom: 10px; */
+    /* z-index: 1; */
+}
+.two {
+    background-color: rgb(250, 247, 150);
+    color: black;
+    /* z-index: 4; */
+}
+.three {
+    background-color: rgb(113, 218, 113);
+}

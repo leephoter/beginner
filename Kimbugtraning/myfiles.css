@@ -2,9 +2,9 @@
     box-sizing: border-box;
 }
 .pa {
-    width: 400px;
+    width: 200px;
     margin: 0 auto;
-    background-color: rgb(178, 181, 182);
+    background-color: rgb(182, 182, 182);
     /* overflow: hidden; */
 }
 /* .pa::after {
@@ -19,21 +19,25 @@
     text-align: center;
     color: #fff;
     font-weight: 600;
-    float: left;
+    /* float: left; */
 }
 
 .one {
     /* width: 100px; */
     /* height: 40px; */
     /* float: left; */
-    background-color: hotpink;
+    background-color: rgb(255, 198, 227);
+    color: black;
+    position: relative; /*위치가 변경되도 자리는 잡아놓음*/
+    top: 50px;
+    right: 50px;
 }
 .two {
     background-color: rgb(250, 247, 150);
     color: black;
 }
 .three {
-    background-color: green;
+    background-color: rgb(113, 218, 113);
 }
 /* .other {
     background-color: rgb(217, 245, 228);
