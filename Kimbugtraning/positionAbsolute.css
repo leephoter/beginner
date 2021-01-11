@@ -30,6 +30,8 @@
     background-color: rgb(255, 198, 227);
     color: black;
     position: fixed;
+    left: 30px;
+    top: 50px;
     /* bottom: 10px; */
     /* z-index: 1; */
 }

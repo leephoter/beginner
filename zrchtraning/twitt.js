@@ -48,7 +48,7 @@ function addspaceTwitt() {
   newspace = document.createElement('div'); //(ID,comment)div 생성
   newspace.style.display = 'inline-block';
   newspace.style.margin = '3px 3px';
-  newspace.style.backgroundColor = 'yellow';
+  newspace.style.backgroundColor = 'rgb(255, 255, 219)';
   newspace.style.textAlign = 'left';
   newspace.style.padding = '3px 10px';
   newspace.style.fontSize = '15px';
@@ -88,6 +88,7 @@ twitt.addEventListener('click', function () {
     news1.innerHTML = timetable();
     news1.appendChild(retouchButton);
     news1.appendChild(removeButton);
+    alert('정해진 댓글이 Twitt됩니다');
   } else {
     news1.innerHTML = timetable();
     news1.appendChild(retouchButton);
