@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background-color: gray;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #273444;
+}
+
+.user-photo img {
+    display: block;
+    /* width, height를 지정해주는
+imgage사용을 할 땐 display: block을 해줘야 편함*/
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user-card {
+    background-color: white;
+    margin: 5px;
+    padding: 2px;
+    border-radius: 4px;
+    border: solid skyblue 1px;
+}
+.user-card::after {
+    content: "";
+    display: block;
+    clear: left;
+}
+.user-photo,
+.user-name {
+    float: left;
+}
+
+.user-status {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: solid 2px white;
+    background-color: rgb(120, 214, 120);
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+}
+.user-photo {
+    position: relative;
+    /* status가 이 사진을 기준으로 위치하도록 */
+    margin-right: 12px;
+}
+.user-name {
+    padding: 8px 0;
+}
