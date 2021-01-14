@@ -25,9 +25,11 @@ imgage사용을 할 땐 display: block을 해줘야 편함*/
 }
 
 .user-card {
+    width: 240px;
+    height: 58px;
     background-color: white;
     margin: 5px;
-    padding: 2px;
+    padding: 7px 12px;
     border-radius: 4px;
     border: solid skyblue 1px;
 }
