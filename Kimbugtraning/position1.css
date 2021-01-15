@@ -19,7 +19,7 @@ h1 {
     display: block;
     /* width, height를 지정해주는
 imgage사용을 할 땐 display: block을 해줘야 편함*/
-    width: 40px;
+    /* width: 40px; */
     height: 40px;
     border-radius: 50%;
 }
