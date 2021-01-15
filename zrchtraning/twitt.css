@@ -81,6 +81,7 @@
   font-style: normal;
   /* display: inline; */
   margin-top: 10;
+  text-align: left;
 }
 .commentButton {
   margin: 0px 0px 0px 10px;
