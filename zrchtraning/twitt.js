@@ -26,11 +26,7 @@ var twitt = document.querySelector('.commentButton'); //twitt 버튼 요소
 var retouchDiv = document.createElement('div'); //수정 버튼 생성
 var retouchButton;
 var removeDiv = document.createElement('div'); //삭제 버튼 생성
-// var removeButton;
-
-let comment = document.querySelector('.comment');
-let updateBtn = document.querySelector('.updateButton');
-let removeButton = document.querySelector('.removeButton');
+var removeButton;
 
 function addspaceRe() {
   newspace = document.createElement('div'); //(id, comment)div 와 다른 div 생성
@@ -61,26 +57,6 @@ function addspaceTwitt() {
   newspace.style.width = '85%';
   newspace.style.height = '85%';
 
-  removeButton = document.createElement('button'); //삭제버튼
-  // removeButton.classList.add('.removeButton');
-  removeButton.classList.add('removeButton');
-  removeButton.innerHTML = '삭제';
-  newspace.appendChild(removeButton);
-  retouchButton = document.createElement('button'); //수정버튼
-  retouchButton.classList.add('retouchButton');
-  retouchButton.innerHTML = '수정';
-  newspace.appendChild(retouchButton);
-
-  console.log('newspace', newspace);
-
-  newID.unshift(inputID.value); //ID 값을 배열앞에 저장
-  newComment.unshift(inputComment.value);
-
-  console.log('newID', newID);
-  console.log('newComment', newComment);
-
-  newspace.innerHTML = newID[0] + '<br/><br/>' + newComment[0];
-
   return newTwitt.unshift(newspace); //twitt(ID, comment)들의 배열
 }
 
@@ -99,10 +75,6 @@ function timetable() {
 }
 
 twitt.addEventListener('click', function () {
-  addspaceTwitt();
-});
-
-twitt.addEventListener('click', function () {
   //twitt을 누르면
   newID.unshift(inputID.value); //ID 값을 배열앞에 저장
   newComment.unshift(inputComment.value); //comment 값을 배열앞에 저장
@@ -113,12 +85,12 @@ twitt.addEventListener('click', function () {
   addspaceRe(); // 수정 삭제   div, button 생성
   var news1 = newTwitt[0];
   news1.appendChild(retouchDiv);
-  comment.prepend(news1);
+  newBox.prepend(news1);
 
   if (newID[0] === '' && newComment[0] === '') {
-    newspace.innerHTML = timetable();
-    newspace.appendChild(retouchButton);
-    newspace.appendChild(removeButton);
+    news1.innerHTML = timetable();
+    news1.appendChild(retouchButton);
+    news1.appendChild(removeButton);
 
     alert('정해진 댓글이 Twitt됩니다');
   } else {
@@ -143,7 +115,6 @@ twitt.addEventListener('click', function () {
       randomComment[[1, 2, 3, 4, 5].sort(() => 0.5 - Math.random())[0]];
   } else {
     //아닌경우는 ID, comment 값(text)를 출력
-    addspaceTwitt();
     news0.innerHTML = newID[0] + '<br/><br/>' + newComment[0];
   }
 });
@@ -180,7 +151,7 @@ function paintToDo(text) {
   const delBtn = document.createElement('button');
   const span = document.createElement('span');
   const newId = toDos.length + 1;
-  delBtn.innerText = '❌';
+  delBtn.innerText = ' ❌';
   delBtn.addEventListener('click', deleteToDo);
   span.innerText = text;
   li.appendChild(span);
