@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    letter-spacing: -0.02em;
+    background-color: rgb(198, 227, 255);
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #1f2d3d;
+    line-height: 1.4545454545;
+}
+
+span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #7d858f;
+    line-height: 1.5;
+}
+
+strong {
+    font-size: 22px;
+    color: #2860e1;
+    line-height: 1.0909090909;
+}
+
+strong span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #525d69;
+    line-height: 1.5;
+}
+
+button {
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
+}
+
+#prev {
+    background-image: url("./icon-backward.svg");
+    left: 0;
+}
+
+#next {
+    background-image: url("./icon-forward.svg");
+    right: 0;
+}
+
+.card {
+    margin: 20px auto;
+    width: 400px;
+    background-color: white;
+}
+
+.card-carousel {
+    position: relative;
+    background-color: black;
+}
+
+.card-carousel img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#prev,
+#next {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    /* 수직 중앙 배치 */
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-content h1 {
+    margin-bottom: 2px;
+}
+
+.card-content strong {
+    display: block;
+    margin-top: 8px;
+    text-align: right;
+}
