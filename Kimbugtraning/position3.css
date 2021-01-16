@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: "Nunito Sans", sans-serif;
+    color: #273444;
+    background-color: #000;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+    box-shadow: none;
+    outline: none;
+}
+
+.modal {
+    width: 670px;
+    height: 215px;
+    padding: 32px 40px;
+    background-color: #fff;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    border-radius: 5px;
+    position: relative;
+}
+
+.modal-title,
+.modal-desc {
+    text-align: center;
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.6666666667;
+}
+.model-title h1 {
+    margin-bottom: 4px;
+}
+
+.modal-desc {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.modal-desc {
+    margin-bottom: 24px;
+}
+
+.input-group {
+    width: 298px;
+    height: 36px;
+    margin: 0 auto;
+    /* position: absolute; */
+    /* left: 186.5px;
+    top: 148px; */
+}
+
+.input-group input {
+    width: 200px;
+    height: 36px;
+    padding: 0 16px;
+    border: none;
+    background: #ededed;
+    border-radius: 4px;
+}
+
+.input-group button {
+    width: 90px;
+    height: 36px;
+    color: white;
+    background-color: #417aff;
+    border: none;
+    border-radius: 4px;
+}
+
+.input-group input,
+.input-group button {
+    font-size: 14px;
+    font-family: "Nunito Sans", sans-serif;
+    line-height: 1.4285714286;
+}
+
+.close-button {
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+    background-image: url("./icon-close.svg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+}
