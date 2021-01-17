@@ -26,15 +26,21 @@ ul {
     border-bottom: 1px solid rgb(182, 181, 181);
     background-color: white;
     max-width: 540px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    /* 수직 중앙 */
 }
 
-.tab-menu::after {
+/* .tab-menu::after {
     content: "";
     display: block;
     clear: left;
-}
+} */
 .tab-menu-item {
-    float: left;
     margin-right: 16px;
 }
 .tab-menu-item a {
