@@ -12,13 +12,14 @@
 
     /* flex-wrap : nowrap;
     기본 값 : 무조건 한 줄로 배치*/
-
     /* flex-wrap: wrap;
     여러줄을 사용하여 배치 */
 
     /* justify-content: center;
     align-items: ;
     align-content: ;   ->> flex-wrap: wrap;이어야함*/
+
+    /* order 요소 순서 */
 }
 
 .pa {
@@ -42,7 +43,7 @@
     /* 순서 */
     flex-wrap: wrap;
     /* 감싸기 */
-    /* justify-content: center; */
+    justify-content: center;
     /* 가로 위치 (중앙) */
     align-content: center;
     /* 수직 위치 (중앙)  */
@@ -62,11 +63,17 @@
     /* height: 40px; */
     background-color: rgb(255, 198, 227);
     color: black;
+
+    /* order: 3; */
 }
 .two {
     background-color: rgb(250, 247, 150);
     color: black;
+
+    /* order: 1; */
 }
 .three {
     background-color: rgb(113, 218, 113);
+
+    /* order: 2; */
 }
