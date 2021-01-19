@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    width: 100%;
+    height: 100vh;
+    background-color: #ff4949;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.box::after {
+    content: "Mobile";
+}
+/* 가상요소 */
+
+@media screen and (min-width: 250px) {
+    .box {
+        background-color: #f89d7e;
+    }
+}
+@media screen and (min-width: 400px) {
+    .box {
+        background-color: #ffeea3;
+    }
+    .box::after {
+        content: "Phone";
+        color: blue;
+        border: solid blue 1px;
+        border-radius: 4px;
+        padding: 3px;
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width: 700px) {
+    .box {
+        background-color: #ceffee;
+    }
+    /* .box img {
+        animation: rotate 1300ms infinite;
+    } */
+}
+
+/* 애니메이션 코드 */
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

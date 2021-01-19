@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    letter-spacing: -0.01em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.landing {
+    background-image: url("./img/MediaQuery.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 100vh;
+    padding: 0 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /* 세로방향 정렬 */
+    justify-content: center;
+    /* main 방향(column) 정렬 */
+    align-items: flex-end;
+    /* 오른쪽 정렬 */
+}
+
+.landing-title {
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+    color: #fff;
+    text-align: right;
+    /* 글자 우측 정렬 */
+}
+
+.landing-title strong {
+    display: block;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: -0.01em;
+}
+
+.landing-link {
+    line-height: 1;
+    color: #fff;
+}
+
+.banner-title a {
+    color: #1f2d3d;
+}
+
+/*  */
+
+.banner {
+    width: 100%;
+    background-color: #ffe26e;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.banner-title a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 64px;
+    font-size: 18px;
+}
+
+.landing-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 52px;
+    font-size: 15px;
+
+    background-color: rgb(0, 0, 0, 0.5);
+    border: solid white 2px;
+    border-radius: 16px;
+}
+.landing-title {
+    margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+    /* 변경되는 부분만 작성 */
+    .banner-title a {
+        height: 80px;
+    }
+    .banner {
+        top: 0;
+        bottom: auto;
+    }
+    .landing {
+        align-items: center;
+    }
+    .landing-title {
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+    .landing-link {
+        width: 180px;
+        height: 56px;
+        font-size: 18;
+    }
+}
