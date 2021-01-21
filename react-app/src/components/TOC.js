@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+//react라는 라이브러리에서 Component라는 class를 loading한다
 class TOC extends Component {
     render() {
         var lists = [];
@@ -21,6 +22,7 @@ class TOC extends Component {
             );
             i = i + 1;
         }
+        console.log("data :>> ", data);
         return (
             <nav>
                 <ul>{lists}</ul>
@@ -28,4 +30,4 @@ class TOC extends Component {
         );
     }
 }
-export default TOC; //TOC라는 class를 외부에서도 사용 가능하게 하는 코드
+export default TOC; //TOC라는 class를 외부에서도 사용 허가

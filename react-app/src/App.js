@@ -3,6 +3,7 @@ import TOC from "./components/TOC";
 import Content from "./components/Content";
 import Subject from "./components/Subject";
 import Control from "./components/Control";
+// import Abc from "./components/test";
 import "./App.css";
 
 class App extends Component {
@@ -28,6 +29,12 @@ class App extends Component {
             ],
         };
     }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         name: { title: "LEE", sub: "Han", desc: "Gyeol", hihi: "css" },
+    //     };
+    // }
     render() {
         console.log("App lender");
         var _title,
@@ -48,6 +55,7 @@ class App extends Component {
             }
         }
         console.log("render", this);
+        console.log("this.state.contents :>> ", this.state.contents);
         return (
             <div className="App">
                 <Subject
@@ -74,9 +82,18 @@ class App extends Component {
                     }.bind(this)}
                 ></Control>
                 <Content title={_title} desc={_desc}></Content>
+                <br></br>
+                {/* <Abc
+                    ddd={this.state.name.title} 
+                    sub={this.state.name.sub}
+                    desc={this.state.name.desc}
+                    hihi={this.state.name.hihi}
+                    data 설정
+                /> */}
             </div>
         );
     }
 }
 
 export default App;
+//App이라는 class를 외부에서도 사용 가능하게 하는 코드
