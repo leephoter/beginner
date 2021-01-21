@@ -21,25 +21,44 @@
     background-color: skyblue;
 }
 
-.table {
+#table {
+    flex-wrap: wrap;
     width: 100%;
     height: 400px;
     margin-top: 25px;
     border: solid white 1px;
-    border-radius: 8px;
+    border-radius: 29px;
     padding: 4px;
 
     background-color: rgb(241, 255, 212);
 }
 .teacher {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     width: 100px;
     height: 40px;
     font-size: 20px;
     margin: 0 auto;
     border-radius: 4px;
+    padding-top: 9px;
     color: white;
     background-color: rgb(255, 189, 164);
+}
+#students {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 95%;
+    height: 85%;
+    margin: 10px auto;
+    border-radius: 20px;
+    padding: 10px 10px;
+    background-color: rgb(207, 255, 117);
+}
+#students span {
+    width: 20px;
+    height: 20px;
+    margin: 0 20px;
+    text-align: center;
+    background-color: yellow;
 }

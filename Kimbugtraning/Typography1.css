@@ -1,0 +1,56 @@
+/* major
+    font-size: 글씨 크기;
+    절대단위 : px
+    상대단위 : em,  rem
+    
+    line-height: 줄 간격;
+    px,  em,  rem
+
+    baseline
+    
+    letter-spacing: 글자 간격
+    
+    font-family: 서체;
+    font-family: "Popfpins";
+    -Poppins체 사용
+    font-family: "Poppins", sans-serif;
+    -Poppins사용, 없으면 sans-serif중에 아무거나 사용
+    font-family: "Poppins", "Roboto", sans-serif;
+    --Poppins사용, 없으면 Roboto사용, 없으면sans-serif중에 아무거나 사용
+    -serif:날카로운 font
+    -sans-serif:부드러운 font
+
+    font-weight: 무게(굵기)
+    regular->400
+    bold->700
+
+     color: 글씨 색상;
+hex->#001122
+rgb->rgb(0, 50, 100)  
+rgba->rgb(0, 50, 100, 0.5)(a는 투명도)  
+*/
+
+/* minor
+text-align: 글자 정렬
+*left, right, center
+
+text-indent: 들여쓰기;
+px
+
+text-transform: 
+none, 
+capitalize-> 첫자 대문자
+uppercase-> 모두 대문자
+lowercase-> 모두 소문자
+
+text-decoration: 
+none
+underline->밑줄
+line-through->중간 줄
+overline-> 윗줄
+
+font-style:
+normal
+italic
+oblique
+*/
