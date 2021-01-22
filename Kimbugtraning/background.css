@@ -1,0 +1,29 @@
+/* 
+url('이름.확장자')
+
+background-repeat: 배경이미지 반복;
+repeat,  no-repeat
+
+background-size: 배경 사이즈;
+contain-> 사진 비율 그대로 
+cover-> 사이즈 다 채우고 사진 짤림
+custom-> 00px 00px
+
+background-position: 위치;
+(x, y)
+
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    width: 600px;
+    height: 600px;
+    background-color: rgb(195, 255, 160);
+    background-image: url("./img/grandview.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center auto;
+}

@@ -54,3 +54,52 @@ normal
 italic
 oblique
 */
+
+/* 
+/* 
+    fonts.google.com 에서 원하는 font의 html, css코드를
+    복붙한다
+    
+    */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    letter-spacing: -0.015em;
+}
+
+/* Font size */
+
+.fs-tiny {
+    font-size: 12px;
+    line-height: 1.3333;
+    /* line-height에선 em단위 생략 
+    (원하는 px) / (font-size) */
+}
+
+.fs-small {
+    font-size: 14px;
+    line-height: 1.42;
+}
+
+.fs-base {
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+/* Font weight */
+
+.fw-light {
+    font-weight: 100;
+}
+
+.fw-regular {
+    font-weight: 700;
+}
+
+/* Colors */
+.text-white {
+    color: white;
+}
