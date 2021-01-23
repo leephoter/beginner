@@ -32,7 +32,7 @@ p {
 
 /* ▼ WHERE YOUR CODE BEGINS */
 
-.card {
+/* .card {
     max-width: 540px;
     padding: 20px;
     background-color: white;
@@ -41,12 +41,18 @@ p {
     justify-content: space-between;
 }
 
-/* .clearfix::after {
+.clearfix::after {
     content: "";
     display: block;
     clear: both;
-} */
+}
 /* float 된 요소들을 잡아주는 코드 */
+
+.card {
+    max-width: 540px;
+    padding: 20px;
+    background-color: white;
+}
 
 .card-user {
     width: 44px;
@@ -66,8 +72,7 @@ p {
 .card-user,
 .card-content {
 }
-
-/* .card {
+*/ .card {
     padding: 20px;
     background-color: #fff;
 }
@@ -97,4 +102,4 @@ p {
 .card-content strong {
     display: block;
     margin-bottom: 12px;
-} */
+}

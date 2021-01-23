@@ -9,6 +9,7 @@ import "./App.css";
 class App extends Component {
     constructor(props) {
         //Component를 초기화시켜주고싶은 코드는 constructor안에 작성
+        //state 설정
         super(props);
         this.state = {
             mode: "read",
@@ -87,7 +88,7 @@ class App extends Component {
                     ddd={this.state.name.title} 
                     sub={this.state.name.sub}
                     desc={this.state.name.desc}
-                    hihi={this.state.name.hihi}
+                    hihi={this.state.name.hihi} 
                     data 설정
                 /> */}
             </div>

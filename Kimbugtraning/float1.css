@@ -17,6 +17,7 @@ body {
 } */
 ul {
     list-style-type: none;
+    /* li의 속성인 점을 none */
     padding-left: 0;
 }
 /* .tab-menu {
