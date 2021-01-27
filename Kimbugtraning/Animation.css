@@ -114,8 +114,9 @@ body {
     background-color: rgb(95, 206, 39);
 
     animation-name: gauge-bar;
-    animation-duration: 1000ms;
+    animation-duration: 2500ms;
     animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes flick {
@@ -131,11 +132,14 @@ body {
 @keyframes gauge-bar {
     0% {
        width: 0;
+       opacity: 1;
     }
     80% {
         width: 100%;
+        opacity: 1;
     }
     100% {
         width: 100%;
+        opacity: 0;
     }
 }
