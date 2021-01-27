@@ -12,12 +12,12 @@ class TOC extends Component {
                         href={"/content/" + data[i].id}
                         data-id={data[i].id}
                         onClick={
-                            (function (id, e) {
+                            (function (e) {
                                 e.preventDefault();
-                                this.props.onChangePage(id);
+                                this.props.onChangePage(e.target.dataset.id);
                                 //id === e.target.dataset.id
                                 // console.log("e :>> ", e);
-                            }.bind(this, data[i].id),
+                            }.bind(this),
                             10)
                         }
                     >
@@ -27,7 +27,7 @@ class TOC extends Component {
             );
             i = i + 1;
         }
-        console.log("data :>> ", data);
+        // console.log("data :>> ", data);
         return (
             <nav>
                 <ul>{lists}</ul>

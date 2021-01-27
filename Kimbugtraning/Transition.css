@@ -1,0 +1,63 @@
+/* 
+class추가시 자연스럽게 변화하는 법
+property:
+duration  지속시간 (ms s) 
+transition: font-size 1000ms;
+->> 1초동안 font-size변화가 일어남
+transition: all: 1000ms;
+->> 모든 특징이 1초동안 변화가 일어남
+
+ease-in : 천천히->빠르게
+ease-out : 빠르게->천천히
+ease-in-out: 
+cubic-beziar: 세밀한 계산 cubic-bezier.com
+
+transition: all 1000ms ease-in;
+->> 모든 특징이 천천히~빠르게 1초동안 변화
+
+delay값
+transition: all 1000ms ease-in 1000ms;
+->> 1초후 모든 특징이 천천히~빠르게 1초동안 변화
+
+transition: all 1000ms ease-in, background-color 2000ms;
+->> 모든 특징이 천천히~빠르게 1초동안 변화, 배경색은 2초동안 변화
+
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    background-color: white;
+}
+
+.line-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    line-height: 1.25;
+    color: black;
+    cursor: pointer;
+
+    position: relative;
+}
+
+.line-button::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: rgb(31, 72, 255);
+    bottom: 0;
+    left: 0;
+
+    /* transition */
+    transition: all 150ms ease-out;
+}
+
+.line-button:hover::after {
+    /* 요소:hover::after ->> 마우스를 요소에 올렷을 때 */
+    width: 100%;
+    background-color: yellowgreen;
+}

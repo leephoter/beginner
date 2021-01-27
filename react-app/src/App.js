@@ -1,18 +1,20 @@
 import React, { Component } from "react";
 import TOC from "./components/TOC";
-import Content from "./components/Content";
+import ReadContent from "./components/ReadContent";
 import Subject from "./components/Subject";
 import Control from "./components/Control";
 // import Abc from "./components/test";
 import "./App.css";
+import CreateContent from "./components/CreateContent";
 
 class App extends Component {
     constructor(props) {
         //Component를 초기화시켜주고싶은 코드는 constructor안에 작성
         //state 설정
         super(props);
+        this.max_content_id = 3;
         this.state = {
-            mode: "read",
+            mode: "create",
             selected_content_id: 2,
             subject: {
                 title: "WEB",
@@ -37,12 +39,18 @@ class App extends Component {
     //     };
     // }
     render() {
-        console.log("App lender");
+        // console.log("App lender");
         var _title,
-            _desc = null;
+            _desc,
+            _article = null;
         if (this.state.mode === "welcome") {
             _title = this.state.welcome.title;
             _desc = this.state.welcome.desc;
+            _article = (
+                <ReadContent title={_title} desc={_desc}>
+                    {" "}
+                </ReadContent>
+            );
         } else if (this.state.mode === "read") {
             var i = 0;
             while (i < this.state.contents.length) {
@@ -54,9 +62,23 @@ class App extends Component {
                 }
                 i = i + 1;
             }
+            _article = (
+                <ReadContent title={_title} desc={_desc}>
+                    {" "}
+                </ReadContent>
+            );
+        } else if (this.state.mode === "create") {
+            _article = (
+                <CreateContent
+                    onSubmit={function (_title, _desc) {
+                        //새 content값 추가
+                        console.log(_title, _desc);
+                    }.bind(this)}
+                ></CreateContent>
+            );
         }
-        console.log("render", this);
-        console.log("this.state.contents :>> ", this.state.contents);
+        // console.log("render", this);
+        // console.log("this.state.contents :>> ", this.state.contents);
         return (
             <div className="App">
                 <Subject
@@ -82,7 +104,7 @@ class App extends Component {
                         });
                     }.bind(this)}
                 ></Control>
-                <Content title={_title} desc={_desc}></Content>
+                {_article}
                 <br></br>
                 {/* <Abc
                     ddd={this.state.name.title} 
