@@ -6,7 +6,7 @@ class Control extends Component {
             <ul>
                 <li>
                     <a
-                        href="/reate"
+                        href="/Create"
                         onClick={function (e) {
                             e.preventDefault();
                             this.props.onChangeMode("create");
@@ -17,7 +17,7 @@ class Control extends Component {
                 </li>
                 <li>
                     <a
-                        href="/update"
+                        href="/Update"
                         onClick={function (e) {
                             e.preventDefault();
                             this.props.onChangeMode("update");
