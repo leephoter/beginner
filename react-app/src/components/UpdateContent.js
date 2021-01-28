@@ -3,16 +3,21 @@ class UpdateContent extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            id: this.props.data.id,
             title: this.props.data.title,
             desc: this.props.data.desc,
         };
+        this.inputFormHandler = this.inputFormHandler.bind(this);
     }
 
     inputFormHandler(e) {
         this.setState({ [e.target.name]: e.target.value });
+        // console.log("e.target.name :>> ", e.target.name);
+        // console.log("e.target.value :>> ", e.target.value);
     }
+
     render() {
-        // console.log("UpdateContent render");
+        // console.log("title :>> ", title);
         return (
             <article>
                 <h2>Update</h2>
@@ -22,26 +27,30 @@ class UpdateContent extends Component {
                     onSubmit={function (e) {
                         e.preventDefault();
                         this.props.onSubmit(
-                            e.target.title.value,
-                            e.target.desc.value
+                            this.state.id,
+                            this.state.title,
+                            this.state.desc
                         );
-                        // this.props.onSubmit();
+                        this.props.onSubmit();
                     }.bind(this)}
                 >
+                    <input
+                        type="hidden"
+                        name="id"
+                        value={this.state.id}
+                    ></input>
                     <p>
                         <input
                             type="text"
                             name="title"
                             placeholder="title"
                             value={this.state.title}
-                            onChange={this.inputFormHandler.bind(this)}
+                            onChange={this.inputFormHandler}
                         ></input>
                     </p>
                     <p>
                         <textarea
-                            onChange={function (e) {
-                                this.setState({ desc: e.target.value });
-                            }.bind(this)}
+                            onChange={this.inputFormHandler}
                             name="desc"
                             placeholder="description"
                             value={this.state.desc}

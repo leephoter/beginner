@@ -1,0 +1,62 @@
+/* 
+type ->> html의 요소를 직접 선택
+class ->> class 선택
+id ->> ID 선택
+
+형제선택자s
+siblings
+
+*/
+
+/*
+
+.one > .two {
+    class(one)자식들 중 모든 class(two)
+    font-size: 20px;
+    color: blue;
+} 
+.one > p {
+    class(one)자식들 중 모든 p태그
+    color: red;
+}
+
+.four ~ p {
+    class(three)이후 모든 형제 p태그
+    color: skyblue;
+}
+
+.one span {
+    class(one)의 자손들 중 모든 span태그
+    background-color: yellow;
+    color: black;
+} */
+
+/* 
+:first-child
+:last-child
+:nth-child()
+*/
+
+body {
+    font-size: 20px;
+}
+
+li:first-child {
+    /* 첫번째 li태그만! */
+    color: blue;
+}
+li:last-child {
+    /* 첫번째 li태그만! */
+    color: red;
+}
+
+li:nth-child(3) {
+    background-color: yellow;
+    color: black;
+}
+
+li:nth-child(2n) {
+    /* 짝수번째 li태그들만 */
+    background-color: yellowgreen;
+    color: black;
+}

@@ -16,13 +16,17 @@ body {
 
 .box {
     width: 300px;
-    height: 300px;
+    height: 100px;
     border: dotted black 1px;
     padding: 5px;
     margin: 30px;
-    overflow: auto;
+    overflow: scroll;
+
     /* overflow-x: scroll;
     가로 스크롤 O
     overflow-y: hidden;
     세로 스크롤 X */
 }
+/* div {
+    overflow: scroll;
+} */
