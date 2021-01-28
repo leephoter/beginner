@@ -1,0 +1,28 @@
+/* 
+overflow:
+visible(기본)  overflow가 발생해도 표시
+
+auto: 
+scroll
+hidden
+*/
+/* * {
+} */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    border: dotted black 1px;
+    padding: 5px;
+    margin: 30px;
+    overflow: auto;
+    /* overflow-x: scroll;
+    가로 스크롤 O
+    overflow-y: hidden;
+    세로 스크롤 X */
+}

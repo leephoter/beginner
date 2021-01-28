@@ -1,0 +1,31 @@
+/* 
+transfrom: ->>요소에 변화가 생겨도 원래 자리가 저장됨
+
+translate(x, y)
+translateX(); ->>x축만 이동
+translateY(); ->>y축만 이동
+
+scale(Num)
+Num의 배율만큼 사이즈 조절
+
+rotate(Numdeg)
+
+visibility: ->>요소에 변화가 생겨도 원래 자리가 저장됨
+
+visible
+hidden
+*/
+
+.box {
+    width: 300px;
+    height: 300px;
+    margin: 0;
+    background-color: blue;
+    border-radius: 40px;
+
+    transform: translate(20px, 30px);
+    transform: scale(1);
+    transform: rotate(45deg);
+
+    visibility: hidden;
+}

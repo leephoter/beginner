@@ -117,7 +117,7 @@ class App extends Component {
     render() {
         // console.log("render", this);
         // console.log("this.state.contents :>> ", this.state.contents);
-        console.log("this.props.data :>> ", this.props.data);
+        // console.log("this.props.data :>> ", this.props.data);
         return (
             <div className="App">
                 <Subject

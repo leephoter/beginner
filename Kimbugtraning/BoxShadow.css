@@ -1,0 +1,53 @@
+/* 
+
+h-offset x축 값
+v-offset y축 값
+blur흐린정도(높은값->>더 흐림)
+spread그림자사이즈
+color색상
+을 순서대로 작성
+
+box-shadow: 0 0 10px 0 #16FF33
+
+opacity: 0~1; 투명도
+*/
+
+* {
+    box-sizing: border-box;
+}
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    width: 200px;
+    height: 70px;
+    border: none;
+    border-radius: 80px;
+    margin: 100px 8px;
+    font-size: 20px;
+    color: white;
+}
+.cancel {
+    background-color: #ff6b6b;
+    /* box-shadow: 0 5px 15px 0 #ff6b6b; */
+    transition: box-shadow 200ms ease-in;
+}
+.cancel:hover {
+    /* 마우스가 올라갔을 때 */
+    box-shadow: 0 7px 15px -5px #ff6b6b;
+    cursor: pointer;
+}
+
+.confirm {
+    background-color: #13d266;
+    /* box-shadow: 0 5px 15px 0 #13d266; */
+    transition: box-shadow 200ms ease-in;
+}
+.confirm:hover {
+    /* 마우스가 올라갔을 때 */
+    box-shadow: 0 7px 15px -5px #13d266;
+    cursor: pointer;
+}
