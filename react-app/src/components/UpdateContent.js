@@ -57,7 +57,7 @@ class UpdateContent extends Component {
                         ></textarea>
                     </p>
                     <p>
-                        <input type="submit"></input>
+                        <input type="submit" value="submit"></input>
                     </p>
                 </form>
             </article>

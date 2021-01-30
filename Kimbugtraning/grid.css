@@ -1,0 +1,25 @@
+/* 
+column
+
+gutter
+
+label
+*/
+
+* {
+    box-sizing: border-box;
+}
+/* div {
+    width: 500px;
+    height: 300px;
+    border: solid gray 3px;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 30px;
+    overflow: scroll;
+} */
+p {
+    background-color: rgb(201, 201, 201);
+    color: green;
+    text-align: center;
+}

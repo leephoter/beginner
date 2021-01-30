@@ -17,7 +17,7 @@ class Control extends Component {
                 </li>
                 <li>
                     <a
-                        href="/Update"
+                        href="/update"
                         onClick={function (e) {
                             e.preventDefault();
                             this.props.onChangeMode("update");
@@ -28,12 +28,12 @@ class Control extends Component {
                 </li>
                 <li>
                     <input
-                        type="button"
-                        value="delate"
                         onClick={function (e) {
                             e.preventDefault();
                             this.props.onChangeMode("delate");
                         }.bind(this)}
+                        type="button"
+                        value="delate"
                     ></input>
                 </li>
             </ul>

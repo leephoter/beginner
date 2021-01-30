@@ -1,0 +1,43 @@
+/* 
+:hover
+마우스 올렸을 때
+:focus
+
+:active
+클릭하는 순간에
+
+!important (0등)
+
+html요소에 직접 style을 지정해주면 1등
+
+selector 순서 (2등부터)
+id ->> class ->> pseudo-class ->> type
+
+
+*/
+
+* {
+    margin: 8px;
+    font-size: 40px;
+    font-weight: 700;
+    user-select: none;
+}
+
+span:hover {
+    border: solid rgb(213, 213, 213) 2px;
+    border-radius: 10px;
+    background-color: rgb(35, 143, 29);
+    cursor: pointer;
+}
+span:active {
+    color: white;
+}
+
+input {
+    outline: none;
+    box-shadow: gray;
+}
+
+input:focus {
+    border: solid rgb(145, 82, 82) 3px;
+}

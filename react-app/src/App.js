@@ -73,26 +73,18 @@ class App extends Component {
                     onSubmit={function (_title, _desc) {
                         //새 content값 추가
                         this.max_content_id = this.max_content_id + 1;
-                        // this.state.contents.push({
-                        //     id: this.max_content_id,
-                        //     title: _title,
-                        //     desc: _desc,
-                        // });
-                        var _contents = this.state.contents.concat({
+                        var _contents = Array.from(this.state.contents);
+                        _contents.push({
                             id: this.max_content_id,
                             title: _title,
                             desc: _desc,
                         });
-                        // var newContents = Array.from(this.state.contents);
-                        // newContents.push({
-                        //     id: this.max_content_id,
-                        //     title: _title,
-                        //     desc: _desc,
-                        // });
                         this.setState({
                             contents: _contents,
+                            mode: "read",
+                            selected_content_id: this.max_content_id,
                         });
-                        console.log(_title, _desc);
+                        // console.log(_title, _desc);
                     }.bind(this)}
                 ></CreateContent>
             );
@@ -116,15 +108,11 @@ class App extends Component {
                             }
                             i = i + 1;
                         }
-                        var _contents = this.state.contents.concat({
-                            id: this.max_content_id,
-                            title: _title,
-                            desc: _desc,
-                        });
                         this.setState({
                             contents: _contents,
+                            mode: "read",
                         });
-                        console.log(_title, _desc);
+                        // console.log(_title, _desc);
                     }.bind(this)}
                 ></UpdateContent>
             );
@@ -155,9 +143,32 @@ class App extends Component {
                 ></TOC>
                 <Control
                     onChangeMode={function (_mode) {
-                        this.setState({
-                            mode: _mode,
-                        });
+                        if (_mode === "delete") {
+                            if (window.confirm("Delete")) {
+                                var _contents = Array.from(this.state.contents);
+                                var i = 0;
+                                while (i < _contents.length) {
+                                    if (
+                                        _contents[i].id ===
+                                        this.state.selected_content_id
+                                    ) {
+                                        _contents.splice(i, 1);
+                                        // data를 삭제
+                                        break;
+                                    }
+                                    i = i + 1;
+                                }
+                                this.setState({
+                                    mode: "welcome",
+                                    contents: _contents,
+                                });
+                                // alert('deleted!');
+                            }
+                        } else {
+                            this.setState({
+                                mode: _mode,
+                            });
+                        }
                     }.bind(this)}
                 ></Control>
                 {this.getContent()}
