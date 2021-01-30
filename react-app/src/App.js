@@ -9,13 +9,11 @@ import "./App.css";
 
 class App extends Component {
     constructor(props) {
-        //Component를 초기화시켜주고싶은 코드는 constructor안에 작성
-        //state 설정
+        //Component를 초기화시켜주고싶은 코드는 constructor안에 state에 설정
         super(props);
         this.max_content_id = 3; //마지막content의 값과 동일
-        //
         this.state = {
-            mode: "create",
+            mode: "welcome",
             selected_content_id: 2,
             subject: {
                 title: "WEB",
@@ -33,25 +31,18 @@ class App extends Component {
             ],
         };
     }
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         name: { title: "LEE", sub: "Han", desc: "Gyeol", hihi: "css" },
-    //     };
-    // }
     getReadContent() {
         var i = 0;
         while (i < this.state.contents.length) {
             var data = this.state.contents[i];
             if (data.id === this.state.selected_content_id) {
                 return data;
-                // break;
+                break;
             }
             i = i + 1;
         }
     }
     getContent() {
-        // console.log("App lender");
         var _title,
             _desc,
             _article = null;
