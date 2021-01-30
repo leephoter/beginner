@@ -1,9 +1,5 @@
 /* 
-column
-
-gutter
-
-label
+html 참고
 */
 
 * {
@@ -19,7 +15,9 @@ label
     overflow: scroll;
 } */
 p {
-    background-color: rgb(201, 201, 201);
-    color: green;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(88, 167, 88);
+    color: rgb(255, 255, 255);
     text-align: center;
 }
