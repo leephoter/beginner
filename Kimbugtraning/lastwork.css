@@ -1,3 +1,6 @@
+body {
+    font-family: "DM Sans";
+}
 * {
     box-sizing: border-box;
     width: 1440px;
@@ -11,22 +14,23 @@
 }
 .title-one {
     font-size: 70px;
-    font-weight: 700;
     width: 930px;
     height: 144px;
     margin-top: 120px;
     line-height: 72px;
-    letter-spacing: -5px;
+    letter-spacing: -5%;
     text-align: center;
+    font-weight: Bold;
 }
 .title-two {
-    font-weight: 400;
     line-height: 32px;
     font-size: 22px;
     width: 370px;
     height: 64px;
     margin-top: 32px;
     text-align: center;
+    font-weight: 400;
+    letter-spacing: -1%;
 }
 .part-one button {
     font-weight: 56px;
@@ -34,10 +38,14 @@
     width: 160px;
     height: 56px;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
 
     background-color: #ffffff;
     color: 2b292d;
+    cursor: pointer;
+}
+.part-one button:hover {
+    box-shadow: 0 2px 7px 2px rgb(201, 201, 201);
 }
 .part-one button:first-child {
     color: white;
@@ -56,17 +64,17 @@
     display: flex;
     height: 340px;
     flex-direction: row;
-    /* justify-content: center;
-    align-items: center; */
     background-color: #f4f5f7;
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
 }
 
 .part-two .master {
     position: absolute;
     font-size: 26px;
-    font-weight: 500;
     line-height: 34px;
-    letter-spacing: -1px;
+    letter-spacing: -4%;
     width: 370px;
     height: 68px;
     transform: translate(255px, 80px);
@@ -74,9 +82,8 @@
 .part-two .develop {
     position: absolute;
     font-size: 26px;
-    font-weight: 500;
     line-height: 34px;
-    letter-spacing: -1px;
+    letter-spacing: -4%;
     width: 450px;
     height: 68px;
     transform: translate(735px, 80px);
@@ -88,5 +95,256 @@
     margin-top: 16px;
     font-size: 22px;
     letter-spacing: 0;
-    font-weight: 350;
+    font-weight: 400;
+}
+
+.part-three {
+    height: 827px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.part-three div:first-child {
+    margin-top: 80px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: -1%;
+    text-align: center;
+    color: #009b4d;
+}
+.part-three .title {
+    margin-top: 16px;
+    font-size: 56px;
+    line-height: 56px;
+    font-style: normal;
+    font-weight: 700;
+    width: 466px;
+    height: 112px;
+    letter-spacing: -3%;
+    text-align: center;
+}
+
+.part-three .desc1 {
+    margin-top: 32px;
+    width: 770px;
+    height: 96px;
+    font-size: 22px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 32px;
+    letter-spacing: -1%;
+}
+.part-three div:last-child {
+    width: 930px;
+    height: 299px;
+    margin-top: 72px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.part-three button {
+    width: 290px;
+    height: 299px;
+    border-radius: 8px;
+    border-style: none;
+    background-color: white;
+    text-align: center;
+
+    background-repeat: no-repeat;
+    background-position: center 24px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -2%;
+    padding-top: 243px;
+    cursor: pointer;
+    box-shadow: 0 1.5px 5px -1px rgb(211, 211, 211);
+}
+.part-three button:first-child {
+    background-image: url("./img/first-img.png");
+    background-size: 142.21px 195px;
+}
+.part-three .second-button {
+    background-image: url("./img/second-img.png");
+    background-size: 146px 195px;
+}
+.part-three button:last-child {
+    background-image: url("./img/third-img.png");
+    background-size: 122.4px 195px;
+}
+.part-three button:hover {
+    background-color: #3141c5;
+    color: #ffffff;
+    box-shadow: 0 3px 12px 3px rgb(211 211 211);
+}
+.part-four {
+    position: relative;
+    height: 728px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.part-four > div:first-child {
+    width: 450px;
+    height: 408px;
+    margin: 80px 0 0 255px;
+}
+.part-four div:first-child div:first-child {
+    width: 100%;
+    height: 24px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #0189d1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.part-four div:first-child h1 {
+    width: 100%;
+}
+.part-four .desc {
+    width: 100%;
+}
+
+.part-four h1 {
+    height: 112px;
+    margin: 16px 0 0;
+    font-size: 56px;
+    font-style: bold;
+    font-weight: 500;
+    line-height: 56px;
+    letter-spacing: -3%;
+    vertical-align: top;
+    text-align: left;
+    overflow: hidden;
+}
+.part-four .desc {
+    margin: 32px 0 0;
+    height: 96px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -1%;
+}
+
+.part-four button {
+    width: 160px;
+    height: 56px;
+    border: none;
+    border-radius: 2px;
+    margin: 72px 0 0;
+    background-color: #3040c4;
+    color: white;
+}
+
+.part-four .image {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background-image: url("./img/phone.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translate(735px, 80px);
+    margin: 0 0 0 30px;
+}
+.part-four > div:last-child {
+    width: 930px;
+    height: 78px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    margin: 554px 255px 96px;
+    transform: translate(255px 5540px);
+}
+.part-four span {
+    font-weight: 700;
+}
+.part-four .desc {
+    width: 450px;
+    height: 78px;
+    margin-top: 24px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -1%;
+    line-height: 26px;
+}
+.part-five {
+    height: 460px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #f2f8fa;
+}
+.part-five .eyes-img {
+    position: absolute;
+    transform: translateX(255px);
+
+    width: 370px;
+    height: 300px;
+    background-image: url("./img/eyes-img.png");
+    background-size: 287px 285px;
+    background-repeat: no-repeat;
+}
+.part-five > div:last-child {
+    width: 530px;
+    height: 236px;
+    position: absolute;
+    transform: translateX(655px);
+}
+.part-five .title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -5%;
+}
+.part-five .desc {
+    display: flex;
+    width: 530px;
+    height: 64px;
+    margin-top: 16px;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: -1%;
+}
+.part-five input {
+    display: inline-block;
+    width: 362px;
+    height: 56px;
+    margin-top: 24px;
+    border: none;
+    border-radius: 2px;
+    background-color: #fff;
+}
+.part-five button {
+    width: 160px;
+    height: 55px;
+    border: none;
+    border-radius: 2px;
+    background-color: #3040c4;
+    color: white;
+}
+.part-five .comment {
+    font-size: 14px;
+    font-weight: 400;
+    color: #7b7b7e;
+}
+.part-five span {
+    color: #3040c4;
+    text-decoration: underline;
+}
+.last {
+    height: 56px;
+}
+.last div {
+    margin: 16px 0 0 255px;
+}
+.last span {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -1%;
+    color: #807f81;
 }
