@@ -50,7 +50,6 @@ function drawing() {
     });
   });
 }
-
 reset();
 randommaking();
 drawing();
