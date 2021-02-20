@@ -4,7 +4,6 @@ import Form from "./components/Form";
 import TodoItemList from "./components/TodoItemList";
 
 class App extends Component {
-    ////constructor? super(props)? this.state? props사용이유?
     id = 0;
     state = {
         input: "",
