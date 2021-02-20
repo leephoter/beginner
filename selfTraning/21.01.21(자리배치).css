@@ -4,13 +4,11 @@
 .inputSpace {
     display: inline;
 }
-
 .inputSpace input {
     width: 120px;
     height: auto;
     font-size: 15px;
 }
-
 .shuffleButton {
     width: auto;
     height: 23px;
@@ -20,7 +18,6 @@
     color: white;
     background-color: skyblue;
 }
-
 #table {
     flex-wrap: wrap;
     width: 750px;

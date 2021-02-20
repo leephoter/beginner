@@ -1,7 +1,6 @@
 var widthNumber = document.querySelector(".inputWidth"); //가로숫자 요소
 var heightNumber = document.querySelector(".inputHeight"); //세로숫자 요소
 var shuffleButton = document.querySelector(".shuffleButton"); //버튼 요소
-// var table = document.getElementById("table");
 var students = document.getElementById("students"); //전체 자리 요소
 
 shuffleButton.addEventListener("click", function () {
