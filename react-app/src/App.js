@@ -169,4 +169,4 @@ class App extends Component {
 }
 
 export default App;
-//App이라는 class를 외부에서도 사용 가능하게 하는 코드
+//App이라는 class를 외부에서도 사용 가능하게 함
