@@ -24,7 +24,7 @@ function intervalmaker() {
       imageaddress = rps.rock;
     }
     document.querySelector('#computer').style.background =
-      ' url(200915.png) ' + imageaddress + ' 0';
+      'url(200915.png) ' + imageaddress + ' 0';
   }, 180);
 }
 intervalmaker();
