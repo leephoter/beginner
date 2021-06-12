@@ -1,19 +1,17 @@
-var 배열 = ['사과', '오렌지', '포도', '딸기'];
-console.log(배열);
-console.log(배열[0]);
-console.log(배열.length);
-console.log('안녕하세요'[3]);
+var 조건 = true;
 
-var 배열같은객체 = {
-  0: '코끼리',
-  1: '고양이',
-  2: '강아지',
-  3: '고라니',
-  length: 4,
-};
-console.log(배열같은객체[0]);
-console.log(배열같은객체.length);
-
-// 실제 배열과 배열같은 객체를 구분하는 법
-console.log(Array.isArray(배열));
-console.log(Array.isArray(배열같은객체));
+while (조건) {
+  var num1 = Math.floor(Math.random() * 9) + 1;
+  var num2 = Math.floor(Math.random() * 9) + 1;
+  var result1 = num1 * num2;
+  var 조건 = true;
+  while (조건) {
+    var answer = prompt(String(num1) + 'cross' + String(num2) + '= ?');
+    if (result1 !== Number(answer)) {
+      alert('retry !!');
+    } else {
+      alert('nice !!');
+      조건 = false;
+    }
+  }
+}
