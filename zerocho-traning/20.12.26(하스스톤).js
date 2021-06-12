@@ -82,6 +82,7 @@ function turnaction(card, data, myturn) {
         // 영웅이 죽엇을때
         myturn ? alert('U win !') : alert("U're rival win !");
         setting();
+        location.reload(true);
       }
     }
     screenmake(!myturn);
