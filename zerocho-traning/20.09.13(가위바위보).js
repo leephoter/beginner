@@ -12,7 +12,7 @@ function computerpic(imageaddress) {
     return v[1] === imageaddress; // 다시
   })[0]; // 다시
 }
-//비동기
+//비 동기
 var intervall;
 function intervalmaker() {
   intervall = setInterval(function () {
