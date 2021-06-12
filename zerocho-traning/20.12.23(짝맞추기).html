@@ -1,62 +1,67 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8  /">
-        <title>FindCouplecard</title>
-        <style>
-            .card{ /* A */
-                width : 60px;
-                height : 100px;
-                display: inline-block; /*세로 일렬로 나오지 않게 함 */
-                margin-right: 20px;
-                margin-bottom: 20px;
-                perspective: 100px;
-            }
-            .card-inner { /*B*/
-                position: relative;
-                width : 100%;
-                height : 100%;
-                text-align: center;
-                transition: transform 0.8s;
-                transform-style: preserve-3d;
-                /* background: rgb(233, 228, 166); */
-            }
-            .card.flipped .card-inner{ /* A.C .B */
-                transform: rotateY(180deg);
-            }
-            .card-front { /* D */
-                background: rgb(84, 106, 226);
-            }
-            .card-back {
-                background: gainsboro;
-            }
-            /* .card-inner-temp {
-                position: relative;
-                width : 60px;
-                height : 99px;
-                text-align: center;
-                transition: transform 0.8s;
-                transform-style: preserve-3d;
-                background: rgb(72, 161, 64);
-            } */
-            .card-front, .card-back {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                border: 0.5px solid black; /* 테두리 */
-                backface-visibility: hidden; /* 뒷면이 보이면 숨김 (안보임)*/
-            }
-            .card-back {
-                transform: rotateY(180deg);
-            }
-            /* .area {
-                width: 320px;
-                height: 360px;
-            } */
-        </style>
-    </head>
-    <body>
-        <div id="wrapper"></div>
-        <script src="./20.12.23(짝맞추기).js"></script>
-    </body>
+  <head>
+    <meta charset="utf-8  /" />
+    <title>FindCouplecard</title>
+    <style>
+      .card {
+        /* A */
+        width: 60px;
+        height: 100px;
+        display: inline-block; /*세로 일렬로 나오지 않게 함 */
+        margin-right: 20px;
+        margin-bottom: 20px;
+        perspective: 100px;
+      }
+      .card-inner {
+        /*B*/
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        /* background: rgb(233, 228, 166); */
+      }
+      .card.flipped .card-inner {
+        /* A.C .B */
+        transform: rotateY(180deg);
+      }
+      .card-front {
+        /* D */
+        background: rgb(84, 106, 226);
+      }
+      .card-back {
+        background: gainsboro;
+      }
+      .card-inner-temp {
+        position: relative;
+        width: 60px;
+        height: 99px;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        background: rgb(72, 161, 64);
+      }
+      .card-front,
+      .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 0.5px solid black; /* 테두리 */
+        backface-visibility: hidden; /* 뒷면이 보이면 숨김 (안보임)*/
+      }
+      .card-back {
+        transform: rotateY(180deg);
+      }
+      .area {
+        width: 320px;
+        height: 365px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper"></div>
+    <script src="./20.12.23(짝맞추기).js"></script>
+  </body>
 </html>

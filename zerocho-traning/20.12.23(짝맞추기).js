@@ -32,8 +32,6 @@ console.log(color);
 function cardsetting(width, height) {
   clickflag = false;
   for (var i = 0; i < width * height; i++) {
-    // var Area = document.createElement('div');
-    // Area.className = 'area';
     var card = document.createElement('div');
     card.className = 'card';
     var cardInner = document.createElement('div');
