@@ -48,12 +48,12 @@ button {
 }
 
 #prev {
-    background-image: url("./icon-backward.svg");
+    background-image: url("./img/icon-backward.svg");
     left: 0;
 }
 
 #next {
-    background-image: url("./icon-forward.svg");
+    background-image: url("./img/icon-forward.svg");
     right: 0;
 }
 
