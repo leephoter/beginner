@@ -4,8 +4,14 @@
 .inputSpace {
     display: inline;
 }
+.inputWidth,
+.inputHeight {
+    border: solid gray 0.2px;
+    color: rgb(80, 80, 80);
+    padding: 2px 0.2px;
+}
 .inputSpace input {
-    width: 120px;
+    width: 100px;
     height: auto;
     font-size: 15px;
 }
@@ -60,5 +66,7 @@
     height: 30px;
     margin: 0 30px;
     text-align: center;
+    border: solid rgb(255, 227, 179) 0.1px;
+    padding: 0 25px;
     background-color: rgb(255, 255, 209);
 }

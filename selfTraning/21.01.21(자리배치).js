@@ -16,6 +16,5 @@ shuffleButton.addEventListener("click", function () {
         newspace.className = i;
         students.appendChild(newspace);
         newspace.innerHTML = shuffle.splice(0, 1);
-        // console.log("shuffle.splice(0) :>> ", shuffle.splice(0, 1));
     }
 });
