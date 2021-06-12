@@ -52,8 +52,8 @@ body {
 
     animation-iteration-count: 4;
     /* animation-iteration-count: infinite; ->> 무한반복 */
-    animation-direction: alternate;
-    /* alternate(번갈아서) from->to, to->from  */
+/* animation-direction: alternate;
+     alternate(번갈아서) from->to, to->from
 } */
 /* 
 @keyframes move-box {
@@ -80,10 +80,10 @@ body {
     align-items: center;
 }
 
- .loading-title {
-     font-size: 18px;
-     font-weight: 700;
-     line-height: 1.3333;
+.loading-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3333;
     color: rgb(92, 92, 92);
 
     margin-bottom: 20px;
@@ -93,16 +93,16 @@ body {
     animation-duration: 800ms;
     animation-iteration-count: infinite;
     animation-direction: alternate;
- }
+}
 
- .progress-bar {
-    width:300px;
+.progress-bar {
+    width: 300px;
     height: 10px;
     border-radius: 100px;
     background-color: rgb(152, 152, 152);
     position: relative;
     overflow: hidden;
- }
+}
 
 .progress-bar-gauge {
     top: 0;
@@ -131,8 +131,8 @@ body {
 
 @keyframes gauge-bar {
     0% {
-       width: 0;
-       opacity: 1;
+        width: 0;
+        opacity: 1;
     }
     80% {
         width: 100%;
