@@ -8,7 +8,7 @@ var rps = {
 //console.log(Object.entries(rps));
 function computerpic(imageaddress) {
   return Object.entries(rps).find(function (v) {
-    //find는 배열에서만 가능한 함수이기 때문에 Object.entries(객체) -> 객체를 배열의 형태로 만드르어줌
+    //find는 배열에서만 가능한 함수이기 때문에 Object.entries(객체) -> 객체를 배열의 형태로 만들어줌
     return v[1] === imageaddress; // 다시
   })[0]; // 다시
 }
@@ -28,12 +28,6 @@ function intervalmaker() {
   }, 180);
 }
 intervalmaker();
-// var elements = document.querySelectorAll('.btn');
-
-// for (var i = 0, element; (element = elements[i]); i++) {
-//     console.log(element);
-// }
-// 점수표
 var scoreline = {
   scissors: 1,
   rock: 0,
