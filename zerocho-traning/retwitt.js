@@ -202,7 +202,7 @@ function handleSubmit(e) {
   paintToDo(currentValue);
   toDoInput.value = '';
 }
-// 로컬스토리지에서 TODOS_LS를 불러옴
+// 로컬스토리지에서 TODOS LS를 불러옴
 function loadToDos() {
   const loadedToDos = localStorage.getItem(TODOS_LS);
   if (loadedToDos !== null) {
