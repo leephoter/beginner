@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.whole {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+
+    position: relative;
+}
+.one {
+    position: relative;
+}
+.two {
+    position: relative;
+}

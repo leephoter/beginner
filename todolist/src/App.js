@@ -13,6 +13,7 @@ class App extends Component {
             // { id: 2, text: " Introduce React", checked: false },
             //기본 list
         ],
+        moodle: "",
     };
     handleChange = (e) => {
         this.setState({
