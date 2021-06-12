@@ -25,7 +25,7 @@ function intervalmaker() {
     }
     document.querySelector('#computer').style.background =
       ' url(200915.png) ' + imageaddress + ' 0';
-  }, 120);
+  }, 180);
 }
 intervalmaker();
 // var elements = document.querySelectorAll('.btn');
@@ -39,6 +39,7 @@ var scoreline = {
   rock: 0,
   paper: -1,
 };
+
 document.querySelectorAll('.btn').forEach(function (btn) {
   btn.addEventListener('click', function () {
     clearInterval(intervall);
@@ -47,14 +48,17 @@ document.querySelectorAll('.btn').forEach(function (btn) {
     }, 2000);
     var mypic = this.textContent;
     var myscore = scoreline[mypic];
-    var computerscore = scroeline[computerpic(imageaddress)];
+    var computerscore = scoreline[computerpic(imageaddress)];
     var scoregap = myscore - computerscore;
     if (scoregap === 0) {
       console.log('Draw !!');
+      alert('draw!!');
     } else if ([-1, 0].includes(scoregap)) {
       console.log('U Win !!');
+      alert('U win!!');
     } else {
       console.log('U Lost !!');
+      alert('U Lost!!');
     }
   });
 });
