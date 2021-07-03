@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+div {
+    border-radius: 8px;
+}
+
+.blockBox {
+    height: 50px;
+    color: blue;
+    background-color: #d1e9ff;
+
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

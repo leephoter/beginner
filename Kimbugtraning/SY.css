@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(228, 237, 255);
+}
+h1 {
+    background-image: url("./img/userImage.jpg");
+    background-position: 0px center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+    font-size: 50px;
+    border-radius: 8px;
+    background-color: rgb(86, 109, 172);
+    padding: 3px 8px 3px 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2 {
+    border: none;
+    border-radius: 20px;
+    padding: 5px 8px;
+    color: #fff;
+    background-color: rgb(174, 200, 255);
+}
+p {
+    color: orange;
+    font-size: 20px;
+    margin-top: -10px;
+}
