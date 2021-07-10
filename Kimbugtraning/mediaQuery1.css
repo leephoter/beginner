@@ -13,7 +13,7 @@ a {
 }
 
 .landing {
-    background-image: url("./img/MediaQuery.jpg");
+    background-image: url("./img/boracayBeach2.jpg");
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -90,7 +90,7 @@ a {
     margin-bottom: 24px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
     /* 변경되는 부분만 작성 */
     .banner-title a {
         height: 80px;
@@ -111,5 +111,24 @@ a {
         width: 180px;
         height: 56px;
         font-size: 18;
+    }
+}
+@media screen and (min-width: 790px) {
+    .banner {
+        width: 790px;
+    }
+    .landing {
+        width: 100vh;
+        overflow: visible;
+        background-position: 0 30%;
+        justify-content: flex-start;
+        padding-top: 100px;
+        align-items: flex-start;
+        height: 100vh;
+    }
+    .landing-title {
+        text-align: left;
+        color: rgb(255, 255, 255);
+        font-size: 45px;
     }
 }

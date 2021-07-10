@@ -9,14 +9,24 @@ div {
     height: 50px;
     color: blue;
     background-color: #d1e9ff;
+    padding: 0 2px;
 
-    width: 30px;
+    /* width: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
 }
 #box {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
+
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 5px;
 }
